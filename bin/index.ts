@@ -50,7 +50,7 @@ async function main() {
           console.error(Color.Red, `Error: error.message`);
         }
       } else {
-        console.log('You can ask a question directly, e.g., `askcmd create and active a python venv`');
+        console.log('You can ask a question directly, e.g., `askcmd create and activate a python venv`');
       }
     } else {
       console.error(Color.Red, 'Error: API key not set. Please run `askcmd -s <GROQ_API_KEY>` first.');
