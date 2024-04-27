@@ -8,7 +8,7 @@ import 'dotenv/config'
 
 async function main() {
   program
-    .name('encli')
+    .name('askcmd')
     .version('1.0.0')
     .description('A CLI tool to ask for commands in english')
     .usage('[question]')
@@ -21,13 +21,13 @@ async function main() {
 
   if (options.set) {
     const homeDir = process.env.HOME || process.env.USERPROFILE;
-    const credentialsPath = path.join(homeDir, '.encli', 'credentials');
+    const credentialsPath = path.join(homeDir, '.askcmd', 'credentials');
     mkdirSync(path.dirname(credentialsPath), { recursive: true });
     writeFileSync(credentialsPath, options.set);
     console.log('API key set successfully!');
   } else {
     const homeDir = process.env.HOME || process.env.USERPROFILE;
-    const credentialsPath = path.join(homeDir, '.encli', 'credentials');
+    const credentialsPath = path.join(homeDir, '.askcmd', 'credentials');
 
     if (existsSync(credentialsPath)) {
       const apiKey = readFileSync(credentialsPath, 'utf-8');
@@ -50,21 +50,14 @@ async function main() {
           console.error(Color.Red, `Error: error.message`);
         }
       } else {
-        console.log('You can ask a question directly, e.g., `encli create and active a python venv`');
+        console.log('You can ask a question directly, e.g., `askcmd create and active a python venv`');
       }
     } else {
-      console.error(Color.Red, 'Error: API key not set. Please run `encli -s <GROQ_API_KEY>` first.');
-      console.log(Color.Yellow, `\nVisit Docs: https://tapthe.link/encli-docs`)
+      console.error(Color.Red, 'Error: API key not set. Please run `askcmd -s <GROQ_API_KEY>` first.');
+      console.log(Color.Yellow, `\nVisit Docs: https://tapthe.link/askcmd-docs`)
     }
   }
 }
 
 
 main();
-
-
-// encli ping redis on 172.32.33
-// encli -a ping redis on 172.32.33
-
-// encli -s 
-

@@ -1,7 +1,7 @@
 {
-  "name": "encli",
+  "name": "askcmd",
   "bin": {
-    "encli": "./bin/index.js"
+    "askcmd": "./bin/index.js"
   },
   "version": "1.0.0",
   "description": "",

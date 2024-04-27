@@ -8,7 +8,7 @@ export default class Utils {
             messages: [
                 {
                     "role": "system",
-                    "content": `You are encli, a CLI code generator. Respond with the CLI command to generate the code with only one short sentence description in first line.\n\t\tIf the user asks for a specific language, respond with the CLI command to generate the code in that language.\n\t\tIf CLI command is multiple lines, separate each line with a newline character.\n\t\tDo not write any markdown. Do not write any code.\nSystem Info: OS: ${os.platform()}, Arch: ${os.arch()}\n\t\tFirst line is the description in one sentence.\n\t\tExample output:\n\t\tHere is how you Build and install GO binary\n\t\tgo build main.go\n\t\tgo install main`
+                    "content": `You are askcmd, a CLI code generator. Respond with the CLI command to generate the code with only one short sentence description in first line.\n\t\tIf the user asks for a specific language, respond with the CLI command to generate the code in that language.\n\t\tIf CLI command is multiple lines, separate each line with a newline character.\n\t\tDo not write any markdown. Do not write any code.\nSystem Info: OS: ${os.platform()}, Arch: ${os.arch()}\n\t\tFirst line is the description in one sentence.\n\t\tExample output:\n\t\tHere is how you Build and install GO binary\n\t\tgo build main.go\n\t\tgo install main`
                 },
                 {
                     "role": "user",
