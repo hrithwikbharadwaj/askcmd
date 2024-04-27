@@ -9,7 +9,7 @@ import 'dotenv/config'
 async function main() {
   program
     .name('askcmd')
-    .version('1.0.0')
+    .version('1.0.2')
     .description('A CLI tool to ask for commands in english')
     .usage('[question]')
     .option('-s, --set <apiKey>', 'Set the API key');
