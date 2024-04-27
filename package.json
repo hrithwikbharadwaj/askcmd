@@ -9,7 +9,9 @@
   "scripts": {
     "build-dist": "tsc && npm run copy-files",
     "copy-files": "cpx \"package.json\" \"dist\" && cpx \".npmignore\" \"dist\" && cpx \"README.md\" \"dist\"",
-    "local-build-install": "npm run build-dist && cd dist/ && npm i -g && cd .."
+    "local-build-install": "npm run build-dist && cd dist/ && npm i -g && cd ..",
+    "publish-dist": "cd dist && npm publish && cd ..",
+    "build-publish": "npm run build-dist && npm run publish-dist"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
   "dependencies": {
     "clipboardy": "^2.3.0",
     "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
     "node-fetch": "^2.6.1"
   }
 }

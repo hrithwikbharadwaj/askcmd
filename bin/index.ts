@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, existsSync, readFileSync } from "fs";
 const path = require('path');
 import Utils from "../src/Utils";
 import { Color } from "../src/Enums/Color";
+import 'dotenv/config'
 
 async function main() {
   program
