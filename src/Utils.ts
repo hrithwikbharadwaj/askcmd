@@ -28,8 +28,10 @@ export default class Utils {
         };
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', requestOptions);
         const data = await response.json();
+        if(data.error){
+            throw new Error(data.error?.message)
+        }
         return data?.choices[0]?.message?.content;
-
     }
 
     public static copyToCliboard(message: string) {

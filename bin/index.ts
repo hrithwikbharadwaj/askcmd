@@ -9,7 +9,7 @@ import 'dotenv/config'
 async function main() {
   program
     .name('askcmd')
-    .version('1.0.2')
+    .version('1.0.3')
     .description('A CLI tool to ask for commands in english')
     .usage('[question]')
     .option('-s, --set <apiKey>', 'Set the API key');
@@ -46,8 +46,8 @@ async function main() {
             Utils.copyToCliboard(clipBoardMessage);
         }
         }
-        catch(error){
-          console.error(Color.Red, `Error: error.message`);
+        catch(error: any){
+          console.error(Color.Red, `Error: ${error.message}`);
         }
       } else {
         console.log('You can ask a question directly, e.g., `askcmd create and activate a python venv`');
